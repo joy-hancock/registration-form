@@ -1,0 +1,244 @@
+/* Root/theme styles */
+:root {
+	/* Colors */
+	--clr-white: #ffffff;
+	--clr-light: #f8f7f9;
+
+	--clr-mid: #683257;
+	--clr-dark: #42213d;
+	--clr-accent: #f51aa4;
+
+	/* --clr-error: #ee4266; */
+	--clr-error: #ed1c24;
+	--clr-placeholder: #c2c1c2;
+
+	/* Font family */
+	--font-base: 'Source Sans 3', sans-serif;
+	--font-heading: 'Open Sans', sans-serif;
+
+	/* Font sizes */
+	/* Step -2: 11.8519px → 12.5px */
+	--step--2: clamp(0.7407rem, 0.7287rem + 0.06vw, 0.7813rem);
+	/* Step -1: 13.3333px → 15px */
+	--step--1: clamp(0.8333rem, 0.8025rem + 0.1543vw, 0.9375rem);
+	/* Step 0: 15px → 18px */
+	--step-0: clamp(0.9375rem, 0.8819rem + 0.2778vw, 1.125rem);
+	/* Step 1: 16.875px → 21.6px */
+	--step-1: clamp(1.0547rem, 0.9672rem + 0.4375vw, 1.35rem);
+	/* Step 2: 18.9844px → 25.92px */
+	--step-2: clamp(1.1865rem, 1.0581rem + 0.6422vw, 1.62rem);
+	/* Step 3: 21.3574px → 31.104px */
+	--step-3: clamp(1.3348rem, 1.1543rem + 0.9025vw, 1.944rem);
+	/* Step 4: 24.0271px → 37.3248px */
+	--step-4: clamp(1.5017rem, 1.2554rem + 1.2313vw, 2.3328rem);
+
+	/* Font weights */
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-bold: 700;
+	--font-black: 900;
+}
+
+/* Composition utility classes */
+
+/* Cover */
+
+/* Creates a layout where header is pushed to top, footer is pushed to bottom, and main content takes the remaining space */
+
+.cover {
+	display: flex;
+	flex-direction: column;
+}
+
+.cover > :first-child:not(main) {
+	margin-block-start: 0;
+}
+
+.cover > :last-child:not(main) {
+	margin-block-end: 0;
+}
+
+.cover > main {
+	margin: auto 0;
+}
+
+/********************************/
+
+/* FLOW */
+
+/* More Info: Like the Every Layout stack: https://every-layout.dev/layouts/stack/
+	Info about this implementation: https://piccalil.li/blog/my-favourite-3-lines-of-css/
+	*/
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1rem);
+}
+
+/********************************/
+
+/* REPEL */
+
+/* A little layout that pushes items away from each other where
+	there is space in the viewport and stacks on small viewports CUSTOM PROPERTIES
+	AND CONFIGURATION --gutter (1rem): This defines the space between each
+	item. --repel-vertical-alignment (center): How items should align vertically.
+	Can be any acceptable flexbox alignment value. */
+
+.repel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: var(--repel-vertical-alignment, center);
+	gap: var(--gutter, 1rem);
+	flex-direction: row;
+}
+.repel[data-nowrap] {
+	flex-wrap: nowrap;
+}
+
+/********************************/
+
+/* WRAPPER */
+
+/* A common wrapper/container */
+
+.wrapper {
+	margin-inline: auto;
+	max-width: var(--wrapper-max-width, 90rem);
+	padding-inline-start: var(--gutter, 1rem);
+	padding-inline-end: var(--gutter, 1rem);
+	position: relative;
+}
+
+/********************************/
+
+/* Body Styles */
+body {
+	font-family: var(--font-base);
+	color: var(--clr-dark);
+}
+
+h1,
+h2,
+legend {
+	font-family: var(--font-heading);
+	font-size: var(--step-2);
+	font-weight: var(--font-bold);
+}
+
+.wrapper {
+	--flow-space: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	--flow-space: 1rem;
+	text-align: center;
+}
+header h1 {
+	background-color: var(--clr-dark);
+	color: var(--clr-white);
+	padding: 2rem;
+	text-transform: uppercase;
+}
+
+header p {
+	--flow-space: 1rem;
+	line-height: 1.2;
+	font-size: var(--step-1);
+}
+
+.divider {
+	--flow-space: 0.25rem;
+	margin-block: 2rem 1rem;
+	width: 100%;
+}
+.divider-top {
+	display: block;
+	height: 0.25rem;
+	background: var(--clr-accent);
+}
+.divider-bottom {
+	display: block;
+	height: 0.125rem;
+	background: var(--clr-accent);
+}
+
+/* Form Styles */
+form,
+.input-text {
+	display: flex;
+	flex-direction: column;
+}
+
+fieldset,
+legend {
+	padding: 0;
+	margin: 0;
+}
+
+fieldset {
+	--flow-space: 0.5rem;
+	border: none;
+}
+
+legend {
+	padding: 0;
+}
+
+.input-wrapper {
+	margin-block-start: 1rem;
+}
+
+legend + .input-wrapper {
+	margin-block-start: 1.5rem;
+}
+
+.input-text {
+	margin-block-start: 0.5rem;
+}
+
+input::placeholder {
+	font-style: italic;
+}
+
+select {
+	border: 0;
+}
+
+.input-select {
+	position: relative;
+	font-size: var(--step-1);
+}
+
+.custom-arrow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: var(--clr-mid);
+	border-top-right-radius: 0.375em;
+	border-bottom-right-radius: 0.375em;
+	display: block;
+	height: 100%;
+	width: 2.5em;
+	pointer-events: none;
+}
+
+.custom-arrow::after {
+	--size: 0.35em;
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.custom-arrow::after {
+	border-left: var(--size) solid transparent;
+	border-right: var(--size) solid transparent;
+	border-top: var(--size) solid var(--clr-white);
+	top: 50%;
+}
