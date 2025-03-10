@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="css/style.css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+			rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/c727a391d5.js"
+			crossorigin="anonymous"></script>
+		<title>The Code Review Newsletter Registration Form</title>
+	</head>
+	<body>
+		<div class="flow">
+			<header class="flow">
+				<h1>The Code Review</h1>
+				<div class="flow wrapper">
+					<h2>Signup for our newsletter</h2>
+					<p>
+						Get the latest news on how your code is doing right in your inbox
+					</p>
+				</div>
+			</header>
+			<div class="divider flow wrapper">
+				<div class="divider-top"></div>
+				<div class="divider-bottom"></div>
+			</div>
+			<main class="wrapper">
+				<form>
+					<fieldset class="flow">
+						<legend>Contact Information</legend>
+						<div class="input-wrapper">
+							<label for="name">Full Name</label>
+							<input
+								class="input-text"
+								type="text"
+								id="name"
+								name="contact-name"
+								aria-required="true"
+								required
+								placeholder="Required"
+								autocomplete="name" />
+						</div>
+						<div class="input-wrapper">
+							<label for="email">Email Address</label>
+							<input
+								class="input-text"
+								type="email"
+								id="email"
+								name="contact-email"
+								aria-required="true"
+								required
+								placeholder="Required"
+								autocomplete="email" />
+						</div>
+						<div class="input-wrapper">
+							<label
+								class="input-label"
+								for="phone"
+								>Phone Number</label
+							>
+							<input
+								class="input-text"
+								type="tel"
+								id="phone"
+								name="contact-phone"
+								minlength="9"
+								maxlength="14"
+								placeholder="Phone Number" />
+						</div>
+						<div class="input-wrapper">
+							<label
+								class="input-label"
+								for="address"
+								>Street Address</label
+							>
+							<input
+								class="input-text"
+								type="text"
+								id="address"
+								name="contact-address"
+								placeholder="Street Address" />
+						</div>
+						<div class="input-wrapper">
+							<label
+								class="input-label"
+								for="city"
+								>City</label
+							>
+							<input
+								class="input-text"
+								type="text"
+								id="city"
+								name="contact-city"
+								placeholder="City" />
+						</div>
+						<div class="input-wrapper">
+							<label for="state">State</label>
+							<div class="input-select input-text">
+								<select
+									name="contact-state"
+									id="state">
+									<option value="">Choose State</option>
+									<option value="alabama">Alabama</option>
+									<option value="alaska">Alaska</option>
+									<option value="arizona">Arizona</option>
+									<option value="arkansas">Arkansas</option>
+									<option value="california">California</option>
+									<option value="colorado">Colorado</option>
+									<option value="connecticut">Connecticut</option>
+									<option value="delaware">Delaware</option>
+									<option value="florida">Florida</option>
+									<option value="georgia">Georgia</option>
+									<option value="hawaii">Hawaii</option>
+									<option value="idaho">Idaho</option>
+									<option value="illinois">Illinois</option>
+									<option value="indiana">Indiana</option>
+									<option value="iowa">Iowa</option>
+									<option value="kansas">Kansas</option>
+									<option value="kentucky">Kentucky</option>
+									<option value="louisiana">Louisiana</option>
+									<option value="maine">Maine</option>
+									<option value="maryland">Maryland</option>
+									<option value="massachusetts">Massachusetts</option>
+									<option value="michigan">Michigan</option>
+									<option value="minnesota">Minnesota</option>
+									<option value="missisippi">Missisippi</option>
+									<option value="missouri">Missouri</option>
+									<option value="montana">Montana</option>
+									<option value="nebraska">Nebraska</option>
+									<option value="nevada">Nevada</option>
+									<option value="new-hampshire">New Hampshire</option>
+									<option value="new-jersey">New Jersey</option>
+									<option value="new-mexico">New Mexico</option>
+									<option value="new-york">New York</option>
+									<option value="north-carolina">North Carolina</option>
+									<option value="north-dakota">North Dakota</option>
+
+									<option value="ohio">Ohio</option>
+									<option value="oklahoma">Oklahoma</option>
+									<option value="oregon">Oregon</option>
+									<option value="pennsylvania">Pennsylvania</option>
+									<option value="rhode-island">Rhode Island</option>
+									<option value="south-carolina">South Carolina</option>
+									<option value="south-dakota">South Dakota</option>
+									<option value="tennessee">Tennessee</option>
+									<option value="texas">Texas</option>
+									<option value="utah">Utah</option>
+									<option value="vermont">Vermont</option>
+									<option value="virgina">Virginia</option>
+									<option value="washington">Washington</option>
+									<option value="west-virgina">West Virginia</option>
+									<option value="wisconsin">Wisconsin</option>
+									<option value="wyoming">Wyoming</option>
+								</select>
+								<span class="custom-arrow"></span>
+							</div>
+						</div>
+						<div class="input-wrapper">
+							<label
+								class="input-label"
+								for="zip"
+								>Zip Code</label
+							>
+							<input
+								class="input-text"
+								type="text"
+								id="zip"
+								name="contact-zip"
+								placeholder="Zip Code" />
+						</div>
+					</fieldset>
+					<div class="divider flow">
+						<div class="divider-top"></div>
+					</div>
+					<fieldset>
+						<legend>Newsletter</legend>
+						<p>Select the newsletters you would like to receive</p>
+
+						<div>
+							<input
+								type="checkbox"
+								checked
+								id="news-html"
+								name="news-html" /><label for="news-html">HTML News</label>
+						</div>
+
+						<div>
+							<input
+								type="checkbox"
+								id="news-css"
+								name="news-css" /><label for="news-css">CSS News</label>
+						</div>
+
+						<div>
+							<input
+								type="checkbox"
+								id="news-javascript"
+								name="news-javascript" /><label for="news-javascript"
+								>Javascript News</label
+							>
+						</div>
+
+						<p>Newsletter format</p>
+						<div>
+							<input
+								type="radio"
+								checked
+								id="format-html"
+								name="format"
+								value="html" />
+							<label for="format-html">HTML</label>
+						</div>
+						<div>
+							<input
+								type="radio"
+								id="format-plain"
+								name="format"
+								value="plain" />
+							<label for="format-plain">Plain text</label>
+						</div>
+						<div>
+							<label for="topics">Other topics you'd like to hear about</label
+							><textarea
+								class="input-text"
+								id="topics"
+								name="topics"></textarea>
+						</div>
+						<button type="submit">Sign Up</button>
+					</fieldset>
+				</form>
+			</main>
+			<footer><p>Copyright The Code Review</p></footer>
+		</div>
+	</body>
+</html>
