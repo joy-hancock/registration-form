@@ -189,53 +189,57 @@
 					<div class="divider flow">
 						<div class="divider-top"></div>
 					</div>
-					<fieldset>
+					<fieldset class="flow newsletter">
 						<legend>Newsletter</legend>
-						<p>Select the newsletters you would like to receive</p>
+						<div class="newsletter-section flow">
+							<p>Select the newsletters you would like to receive</p>
 
-						<div>
-							<input
-								type="checkbox"
-								checked
-								id="news-html"
-								name="news-html" /><label for="news-html">HTML News</label>
+							<div>
+								<input
+									type="checkbox"
+									checked
+									id="news-html"
+									name="news-html" /><label for="news-html">HTML News</label>
+							</div>
+
+							<div>
+								<input
+									type="checkbox"
+									id="news-css"
+									name="news-css" /><label for="news-css">CSS News</label>
+							</div>
+
+							<div>
+								<input
+									type="checkbox"
+									id="news-javascript"
+									name="news-javascript" /><label for="news-javascript"
+									>Javascript News</label
+								>
+							</div>
+						</div>
+						<div class="newsletter-section flow">
+							<p>Newsletter format</p>
+							<div>
+								<input
+									type="radio"
+									checked
+									id="format-html"
+									name="format"
+									value="html" />
+								<label for="format-html">HTML</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									id="format-plain"
+									name="format"
+									value="plain" />
+								<label for="format-plain">Plain text</label>
+							</div>
 						</div>
 
-						<div>
-							<input
-								type="checkbox"
-								id="news-css"
-								name="news-css" /><label for="news-css">CSS News</label>
-						</div>
-
-						<div>
-							<input
-								type="checkbox"
-								id="news-javascript"
-								name="news-javascript" /><label for="news-javascript"
-								>Javascript News</label
-							>
-						</div>
-
-						<p>Newsletter format</p>
-						<div>
-							<input
-								type="radio"
-								checked
-								id="format-html"
-								name="format"
-								value="html" />
-							<label for="format-html">HTML</label>
-						</div>
-						<div>
-							<input
-								type="radio"
-								id="format-plain"
-								name="format"
-								value="plain" />
-							<label for="format-plain">Plain text</label>
-						</div>
-						<div>
+						<div class="topics flow">
 							<label for="topics">Other topics you'd like to hear about</label
 							><textarea
 								class="input-text"
