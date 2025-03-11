@@ -306,7 +306,7 @@ textarea:focus-visible {
 	outline-offset: 0.5ex;
 }
 
-input::placeholder {
+::placeholder {
 	font-style: italic;
 	color: var(--clr-mid);
 }
